@@ -1,3 +1,6 @@
+#ifndef REPL_H
+#define REPL_H
+
 #include <stddef.h>
 #include <stdio.h>
 #include <sys/types.h>
@@ -13,10 +16,10 @@ InputBuffer* new_input_buffer();
 
 void print_prompt();
 
-void prase_input(InputBuffer* input_buffer);
-
 void read_input(InputBuffer* input_buffer);
 
 void close_input_buffer(InputBuffer* input_buffer);
 
 void start_repl();
+
+#endif
