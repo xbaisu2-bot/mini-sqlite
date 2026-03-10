@@ -1,5 +1,6 @@
 #include "repl.h"
 #include "input_parser.h"
+#include "single_table.h"
 
 #include <stdlib.h>
 #include <stdbool.h>
@@ -39,6 +40,7 @@ void close_input_buffer(InputBuffer* input_buffer){
 }
 
 void start_repl(){
+  Table* table=new_table();
   InputBuffer* input_buffer=new_input_buffer();
 
   while(true){
